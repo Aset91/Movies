@@ -5,7 +5,9 @@
       <map>
         <entry key="..\:/Users/Asya/AndroidStudioProjects/Movies/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.121" />
         <entry key="..\:/Users/Asya/AndroidStudioProjects/Movies/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/Asya/AndroidStudioProjects/Movies/app/src/main/res/layout/genres_fragment.xml" value="0.2" />
+        <entry key="..\:/Users/Asya/AndroidStudioProjects/Movies/app/src/main/res/layout/film_item.xml" value="0.25" />
+        <entry key="..\:/Users/Asya/AndroidStudioProjects/Movies/app/src/main/res/layout/genre_item.xml" value="0.24895833333333334" />
+        <entry key="..\:/Users/Asya/AndroidStudioProjects/Movies/app/src/main/res/layout/genres_fragment.xml" value="0.264" />
         <entry key="..\:/Users/Asya/AndroidStudioProjects/Movies/app/src/main/res/layout/movie_info_fragment.xml" value="0.264" />
       </map>
     </option>

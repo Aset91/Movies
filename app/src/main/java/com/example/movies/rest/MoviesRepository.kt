@@ -7,7 +7,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class MoviesRepository {
-    val BASE_URL = "https://s3-eu-west-1.amazonaws.com/"
+
 
     val api: MoviesApi by lazy {
         Retrofit.Builder()
@@ -25,4 +25,7 @@ class MoviesRepository {
         return api.getFilm()
     }
 
+    companion object {
+        val BASE_URL = "https://s3-eu-west-1.amazonaws.com/"
+    }
 }

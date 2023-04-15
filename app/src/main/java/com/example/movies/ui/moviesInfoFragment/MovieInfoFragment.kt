@@ -1,26 +1,22 @@
 package com.example.movies.ui.moviesInfoFragment
 
-import android.os.Binder
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.example.movies.databinding.MovieInfoFragmentBinding
-import com.example.movies.response.FilmsList
+import com.example.movies.response.Film
 import com.example.movies.rest.MoviesRepository
-
-
+import com.example.movies.rest.MoviesRepository.Companion.BASE_URL
 
 class MovieInfoFragment : Fragment() {
     lateinit var viewModel: MovieInfoFragmentViewModel
     lateinit var binding: MovieInfoFragmentBinding
     private val args: MovieInfoFragmentArgs by navArgs()
-    val BASE_URL = "https://s3-eu-west-1.amazonaws.com/"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,9 +35,12 @@ class MovieInfoFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        binding.movieName.text = args.classForTest.text
-        Glide.with(this).load(BASE_URL).into(binding.movieImage)
-
+        binding.movieName.text = args.film.name
+        binding.description.text = args.film.description
+        binding.year.text = args.film.year.toString()
+        binding.rating.text = args.film.rating.toString()
+        binding.localizedName.text = args.film.localized_name
+        binding.id.text = args.film.id.toString()
+        Glide.with(this).load(args.film.image_url).into(binding.movieImage)
     }
 }

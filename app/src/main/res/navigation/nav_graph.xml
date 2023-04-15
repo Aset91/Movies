@@ -11,7 +11,7 @@
         android:label="GenresFragment"
         tools:layout="@layout/genres_fragment">
         <action
-            android:id="@+id/action_genresFragment_to_movieInfoFragment"
+            android:id="@+id/to_movieInfoFragment"
             app:destination="@id/movieInfoFragment" />
     </fragment>
     <fragment
@@ -20,8 +20,8 @@
         android:label="MovieInfoFragment"
         tools:layout="@layout/movie_info_fragment">
         <argument
-            android:name="classForTest"
-            app:argType="com.example.movies.ui.ClassForTest"/>
+            android:name="film"
+            app:argType="com.example.movies.response.Film"/>
     </fragment>
 
 </navigation>
